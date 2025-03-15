@@ -1,0 +1,360 @@
+.menu-container {
+    padding: 120px 5% 5rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.menu-container h1 {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: #2c3e50;
+}
+
+/* Category Navigation */
+.category-nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.category-btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 1.1rem;
+    background: white;
+    border: 2px solid #e67e22;
+    border-radius: 30px;
+    color: #e67e22;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+.category-btn:hover,
+.category-btn.active {
+    background: #e67e22;
+    color: white;
+}
+
+/* Search Bar */
+.search-container {
+    max-width: 600px;
+    margin: 0 auto 3rem;
+    padding: 0 1rem;
+}
+
+.search-input {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    font-size: 1.1rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: #e67e22;
+    box-shadow: 0 0 0 3px rgba(230, 126, 34, 0.1);
+}
+
+.search-input::placeholder {
+    color: #999;
+}
+
+/* Menu Sections */
+.menu-section {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.menu-section.active {
+    display: block;
+    opacity: 1;
+}
+
+.menu-section h2 {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #2c3e50;
+}
+
+/* Menu Grid */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+/* Menu Items */
+.menu-item {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    min-height: 350px; /* Fixed height to prevent layout shifts */
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+}
+
+.menu-item .image-container {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    background-color: #f5f5f5;
+    overflow: hidden;
+}
+
+.menu-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+    will-change: transform;
+    transform: translateZ(0); /* Force GPU acceleration */
+}
+
+/* Loading placeholder animation */
+.menu-item.loading .image-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #f0f0f0 0%, #e0e0e0 50%, #f0f0f0 100%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+/* Blur-up loading effect */
+.menu-item img.blur-up {
+    filter: blur(5px);
+    transition: filter 0.3s ease;
+}
+
+.menu-item img.blur-up.loaded {
+    filter: blur(0);
+}
+
+/* Progressive loading indicator */
+.loading-progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #e67e22;
+    transition: width 0.3s ease;
+}
+
+/* Image error state */
+.menu-item.error .image-container {
+    background: #fff5f5;
+}
+
+.menu-item.error .image-container::after {
+    content: 'Image not available';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #e53e3e;
+    font-size: 0.9rem;
+}
+
+/* Optimize for different screen sizes */
+@media (max-width: 768px) {
+    .menu-item {
+        min-height: 300px;
+    }
+    .menu-item .image-container {
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-item {
+        min-height: 280px;
+    }
+    .menu-item .image-container {
+        height: 180px;
+    }
+}
+
+.menu-item h3 {
+    padding: 1rem 1rem 0.5rem;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+}
+
+.menu-item .price {
+    padding: 0 1rem 1rem;
+    color: #e67e22;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+/* Instagram-style Popup */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.popup-overlay.active {
+    display: flex;
+    opacity: 1;
+}
+
+.popup-container {
+    background: white;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 1000px;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+}
+
+.close-popup {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #2c3e50;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.popup-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.popup-image {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.popup-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.popup-details {
+    padding: 1rem;
+}
+
+.popup-details h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+.popup-details .price {
+    font-size: 1.5rem;
+    color: #e67e22;
+    margin-bottom: 1.5rem;
+}
+
+.popup-details .description {
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.ingredients, .allergens {
+    margin-bottom: 1.5rem;
+}
+
+.ingredients h3, .allergens h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+}
+
+.ingredients ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.ingredients ul li {
+    margin-bottom: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .menu-container {
+        padding: 100px 3% 3rem;
+    }
+
+    .category-nav {
+        gap: 0.5rem;
+    }
+
+    .category-btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 1rem;
+    }
+
+    .popup-content {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+
+    .popup-image {
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-container h1 {
+        font-size: 2rem;
+    }
+
+    .menu-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .popup-image {
+        height: 250px;
+    }
+} 

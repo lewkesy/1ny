@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1ny Bakery - Management</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="manage-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">1ny</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+        </ul>
+    </nav>
+
+    <!-- Login Section -->
+    <div class="login-section" id="login-section">
+        <div class="login-container">
+            <h2>Manager Login</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" required>
+                </div>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Management Section (Hidden by default) -->
+    <div class="management-section" id="management-section" style="display: none;">
+        <div class="management-container">
+            <h1>Menu Management</h1>
+            
+            <!-- Add New Item Form -->
+            <div class="add-item-section">
+                <h2>Add New Item</h2>
+                <form id="add-item-form" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="item-category">Category</label>
+                        <select id="item-category" name="category" required>
+                            <option value="daily-cake">Daily Cake</option>
+                            <option value="bread">Bread</option>
+                            <option value="bubble-tea">Bubble Tea</option>
+                            <option value="snacks">Snacks</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="item-name">Name</label>
+                        <input type="text" id="item-name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="item-price">Price</label>
+                        <input type="number" id="item-price" name="price" step="0.01" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="item-description">Description</label>
+                        <textarea id="item-description" name="description" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="item-ingredients">Ingredients (comma-separated)</label>
+                        <input type="text" id="item-ingredients" name="ingredients">
+                    </div>
+                    <div class="form-group">
+                        <label for="item-allergens">Allergens</label>
+                        <input type="text" id="item-allergens" name="allergens">
+                    </div>
+                    <div class="form-group">
+                        <label for="item-image">Image</label>
+                        <input type="file" id="item-image" name="image" accept="image/*" required>
+                        <div id="image-preview" class="image-preview"></div>
+                    </div>
+                    <button type="submit">Add Item</button>
+                </form>
+            </div>
+
+            <!-- Current Items List -->
+            <div class="current-items-section">
+                <h2>Current Items</h2>
+                <div class="items-filter">
+                    <label>Filter by Category:</label>
+                    <select id="filter-category">
+                        <option value="all">All Items</option>
+                        <option value="daily-cake">Daily Cake</option>
+                        <option value="bread">Bread</option>
+                        <option value="bubble-tea">Bubble Tea</option>
+                        <option value="snacks">Snacks</option>
+                    </select>
+                </div>
+                <div class="items-list" id="items-list">
+                    <!-- Items will be populated here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="manage.js"></script>
+</body>
+</html> 

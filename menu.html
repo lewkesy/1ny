@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1ny Bakery - Menu</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="menu-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">1ny</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#products">Products</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="menu-container">
+        <h1>Our Menu</h1>
+        
+        <div class="category-nav">
+            <button class="category-btn active" data-category="daily-cake">Daily Cake</button>
+            <button class="category-btn" data-category="bread">Bread</button>
+            <button class="category-btn" data-category="bubble-tea">Bubble Tea</button>
+            <button class="category-btn" data-category="snacks">Snacks</button>
+        </div>
+
+        <div class="search-container">
+            <input type="text" id="menu-search" placeholder="Search menu items..." class="search-input">
+            <div id="search-results" class="menu-grid" style="display: none;"></div>
+        </div>
+
+        <!-- Daily Cake Section -->
+        <div class="menu-section active" id="daily-cake">
+            <h2>Daily Cake</h2>
+            <!-- Items will be loaded dynamically -->
+        </div>
+
+        <!-- Bread Section -->
+        <div class="menu-section" id="bread">
+            <h2>Bread</h2>
+            <!-- Items will be loaded dynamically -->
+        </div>
+
+        <!-- Bubble Tea Section -->
+        <div class="menu-section" id="bubble-tea">
+            <h2>Bubble Tea</h2>
+            <!-- Items will be loaded dynamically -->
+        </div>
+
+        <!-- Snacks Section -->
+        <div class="menu-section" id="snacks">
+            <h2>Snacks</h2>
+            <!-- Items will be loaded dynamically -->
+        </div>
+    </div>
+
+    <!-- Instagram-style Popup -->
+    <div class="popup-overlay">
+        <div class="popup-container">
+            <button class="close-popup"><i class="fas fa-times"></i></button>
+            <div class="popup-content">
+                <div class="popup-image">
+                    <img src="" alt="">
+                </div>
+                <div class="popup-details">
+                    <h2></h2>
+                    <p class="price"></p>
+                    <p class="description"></p>
+                    <div class="ingredients">
+                        <h3>Ingredients</h3>
+                        <ul></ul>
+                    </div>
+                    <div class="allergens">
+                        <h3>Allergens</h3>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="menu.js"></script>
+</body>
+</html> 

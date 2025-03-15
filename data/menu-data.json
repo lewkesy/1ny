@@ -1,0 +1,181 @@
+{
+    "items": {
+        "daily-cake1": {
+            "category": "daily-cake",
+            "name": "Classic Chocolate Layer Cake",
+            "price": "6.99",
+            "description": "Rich chocolate sponge cake layered with dark chocolate ganache and fresh cream",
+            "ingredients": [
+                "chocolate",
+                "fresh cream",
+                "butter",
+                "eggs",
+                "flour",
+                "cocoa powder"
+            ],
+            "allergens": "Contains: eggs, dairy, wheat",
+            "image": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&w=800&q=80"
+        },
+        "daily-cake2": {
+            "category": "daily-cake",
+            "name": "Strawberry Shortcake",
+            "price": "5.99",
+            "description": "Light vanilla sponge cake with layers of fresh strawberries and whipped cream",
+            "ingredients": [
+                "strawberries",
+                "whipped cream",
+                "vanilla",
+                "flour",
+                "sugar",
+                "eggs"
+            ],
+            "allergens": "Contains: eggs, dairy, wheat",
+            "image": "https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&w=800&q=80"
+        },
+        "daily-cake3": {
+            "category": "daily-cake",
+            "name": "Tiramisu Slice",
+            "price": "7.99",
+            "description": "Classic Italian dessert with coffee-soaked ladyfingers and mascarpone cream",
+            "ingredients": [
+                "mascarpone",
+                "coffee",
+                "ladyfingers",
+                "cocoa powder",
+                "eggs"
+            ],
+            "allergens": "Contains: eggs, dairy, wheat",
+            "image": "https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&w=800&q=80"
+        },
+        "bread1": {
+            "category": "bread",
+            "name": "Artisan Sourdough",
+            "price": "4.99",
+            "description": "Traditional sourdough bread with a crispy crust and chewy interior",
+            "ingredients": [
+                "flour",
+                "water",
+                "salt",
+                "sourdough starter"
+            ],
+            "allergens": "Contains: wheat",
+            "image": "https://images.unsplash.com/photo-1589367920969-ab8e050bbb04?auto=format&w=800&q=80"
+        },
+        "bread2": {
+            "category": "bread",
+            "name": "Multigrain Loaf",
+            "price": "5.49",
+            "description": "Healthy multigrain bread packed with seeds and whole grains",
+            "ingredients": [
+                "whole wheat flour",
+                "sunflower seeds",
+                "flax seeds",
+                "oats",
+                "honey"
+            ],
+            "allergens": "Contains: wheat",
+            "image": "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&w=800&q=80"
+        },
+        "bread3": {
+            "category": "bread",
+            "name": "French Baguette",
+            "price": "3.99",
+            "description": "Classic French baguette with a golden crust and light, airy interior",
+            "ingredients": [
+                "flour",
+                "water",
+                "salt",
+                "yeast"
+            ],
+            "allergens": "Contains: wheat",
+            "image": "https://images.unsplash.com/photo-1549931319-a545dcf3bc73?auto=format&w=800&q=80"
+        },
+        "bubble-tea1": {
+            "category": "bubble-tea",
+            "name": "Classic Milk Tea",
+            "price": "4.99",
+            "description": "Traditional black milk tea with chewy tapioca pearls",
+            "ingredients": [
+                "black tea",
+                "milk",
+                "tapioca pearls",
+                "brown sugar"
+            ],
+            "allergens": "Contains: dairy",
+            "image": "https://images.unsplash.com/photo-1558857563-c0c3a62fd0b7?auto=format&w=800&q=80"
+        },
+        "bubble-tea2": {
+            "category": "bubble-tea",
+            "name": "Taro Milk Tea",
+            "price": "5.49",
+            "description": "Creamy taro-flavored milk tea with tapioca pearls",
+            "ingredients": [
+                "taro powder",
+                "milk",
+                "tapioca pearls",
+                "sugar"
+            ],
+            "allergens": "Contains: dairy",
+            "image": "https://images.unsplash.com/photo-1627628130544-0d4dc8654239?auto=format&w=800&q=80"
+        },
+        "bubble-tea3": {
+            "category": "bubble-tea",
+            "name": "Matcha Bubble Tea",
+            "price": "5.99",
+            "description": "Japanese green tea with milk and tapioca pearls",
+            "ingredients": [
+                "matcha powder",
+                "milk",
+                "tapioca pearls",
+                "honey"
+            ],
+            "allergens": "Contains: dairy",
+            "image": "https://images.unsplash.com/photo-1638176066666-ffb2f013c7dd?auto=format&w=800&q=80"
+        },
+        "snacks1": {
+            "category": "snacks",
+            "name": "Butter Croissant",
+            "price": "3.49",
+            "description": "Flaky, buttery croissant made with French butter",
+            "ingredients": [
+                "flour",
+                "butter",
+                "milk",
+                "eggs",
+                "salt"
+            ],
+            "allergens": "Contains: dairy, eggs, wheat",
+            "image": "https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&w=800&q=80"
+        },
+        "snacks2": {
+            "category": "snacks",
+            "name": "Chocolate Chip Cookie",
+            "price": "2.99",
+            "description": "Classic chocolate chip cookie with crispy edges and soft center",
+            "ingredients": [
+                "flour",
+                "butter",
+                "chocolate chips",
+                "brown sugar",
+                "eggs"
+            ],
+            "allergens": "Contains: dairy, eggs, wheat",
+            "image": "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&w=800&q=80"
+        },
+        "snacks3": {
+            "category": "snacks",
+            "name": "Cheese Danish",
+            "price": "4.49",
+            "description": "Flaky pastry filled with sweet cream cheese and vanilla",
+            "ingredients": [
+                "flour",
+                "cream cheese",
+                "butter",
+                "vanilla",
+                "eggs"
+            ],
+            "allergens": "Contains: dairy, eggs, wheat",
+            "image": "https://images.unsplash.com/photo-1509365465985-25d11c17e812?auto=format&w=800&q=80"
+        }
+    }
+}
